@@ -23,12 +23,7 @@ const Projects = () => {
           <br />
         </div>
         <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
-          <img
-            src={Projects.image}
-            alt="..."
-            data-aos="fade-right"
-            className="max-w-[45vw] min-w-[22rem]"
-          />
+          
           <Swiper
             pagination={{
               clickable: true,
@@ -36,7 +31,7 @@ const Projects = () => {
             data-aos="fade-left"
             spaceBetween={20}
             modules={[Pagination]}
-            className="rounded-3xl pb-16 max-w-xs drop-shadow-primary self-start"
+            className="rounded-3xl pb-16 max-w-lg drop-shadow-primary self-start"
           >
             {Projects.project_content.map((content, i) => (
               <SwiperSlide
@@ -47,7 +42,8 @@ const Projects = () => {
                 <div className="flex flex-col gap-1 mt-2">
                   <h5 className="font-bold font-Poppins">{content.title}</h5>
                   <button className="font-bold text-gray self-end">
-                    READ MORE
+                    <a href={content.link}>DEMO</a> 
+                  
                   </button>
                 </div>
               </SwiperSlide>

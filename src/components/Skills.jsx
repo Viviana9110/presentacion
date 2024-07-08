@@ -96,15 +96,7 @@ const Skills = () => {
               <div>
                 <h6>{skill.name}</h6>
                 <p className="italic">{skill.para}</p>
-                <div
-                  onClick={() => {
-                    setSelectSkill(skill);
-                    openModal();
-                  }}
-                  className="text-xl absolute top-3 right-3"
-                >
-                  {createElement(skills.icon)}
-                </div>
+                
               </div>
             </div>
           ))}
